@@ -25,8 +25,9 @@ pyenv activate venv
 
 * You need to create a databaes and user in PostgreSQL:
 
-Create database: `createdb back-to-feature-db`
-Create user: `createuser -P -s deLorean_admin`
+Create user: `sudo -u postgres createuser chamaleon_admin `
+Create database: `sudo -u postgres createdb -O chamaleon_admin chamaleon-db`
+
 
 * Create environment variables:
 ```
