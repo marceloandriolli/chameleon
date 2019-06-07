@@ -43,6 +43,8 @@ INSTALLED_APPS = [
     # Third Party Apps
     'rest_framework',
 
+    # Project Apps
+    'server.core',
 ]
 
 MIDDLEWARE = [
