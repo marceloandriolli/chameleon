@@ -6,15 +6,15 @@ from server.core.models import RiskTypeModel, FieldModel
 class FieldSerializer(serializers.ModelSerializer):
     class Meta:
         model = FieldModel
-        fields = ('name', 'type', 'property')
+        fields = ('id','name', 'type', 'property')
 
 
 class RiskSerializer(serializers.ModelSerializer):
-    fields = FieldSerializer(many=True)
+    fields = FieldSerializer(many=True, required=False)
 
     class Meta:
         model = RiskTypeModel
-        fields = ('name', 'fields')
+        fields = ('id', 'name', 'fields')
 
     def create(self, validated_data):
         fields = validated_data.pop('fields')
