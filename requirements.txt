@@ -10,3 +10,5 @@ pytest==4.6.3
 coreapi==2.3.3
 django-storages==1.7.1
 django-s3-folder-storage==0.5
+coverage==4.5.3
+pytest-cov==2.7.1
